@@ -2,24 +2,24 @@ import Image from "next/image";
 
 const visualItems = [
   {
-    src: "/images/logo-wide.jpeg",
-    alt: "Logo APEX LINER sur fond noir",
-    label: "Identité",
+    src: "/images/solar-film.svg",
+    alt: "Illustration de films solaires pour vitrages",
+    label: "Films solaires",
   },
   {
-    src: "/images/reference-01.jpg",
-    alt: "Référence visuelle sur ordinateur",
-    label: "Présentation",
+    src: "/images/covering.svg",
+    alt: "Illustration covering véhicule",
+    label: "Covering",
   },
   {
-    src: "/images/logo-vertical.jpeg",
-    alt: "Logo vertical APEX LINER",
-    label: "Signalétique",
+    src: "/images/signage.svg",
+    alt: "Illustration marquage publicitaire",
+    label: "Marquage",
   },
   {
-    src: "/images/reference-02.jpg",
-    alt: "Référence visuelle responsive",
-    label: "Digital",
+    src: "/images/adhesive-window.svg",
+    alt: "Illustration films adhésifs pour vitrages",
+    label: "Vitrages",
   },
 ];
 

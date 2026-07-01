@@ -108,6 +108,85 @@ body {
   background: rgba(0, 0, 0, 0.42);
 }
 
+.ambient-orbs {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-orbs::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black, transparent 70%);
+}
+
+.orb {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  filter: blur(22px);
+  opacity: 0.42;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.orb-one {
+  left: 7%;
+  top: 18%;
+  width: 11rem;
+  height: 11rem;
+  background: rgba(14, 165, 233, 0.42);
+  animation: orb-drift-one 18s ease-in-out infinite alternate;
+}
+
+.orb-two {
+  right: 8%;
+  top: 16%;
+  width: 15rem;
+  height: 15rem;
+  background: rgba(148, 163, 184, 0.32);
+  animation: orb-drift-two 22s ease-in-out infinite alternate;
+}
+
+.orb-three {
+  left: 32%;
+  top: 56%;
+  width: 9rem;
+  height: 9rem;
+  background: rgba(56, 189, 248, 0.28);
+  animation: orb-drift-three 20s ease-in-out infinite alternate;
+}
+
+.orb-four {
+  right: 22%;
+  bottom: 12%;
+  width: 12rem;
+  height: 12rem;
+  background: rgba(99, 102, 241, 0.24);
+  animation: orb-drift-four 24s ease-in-out infinite alternate;
+}
+
+.orb-five {
+  left: 14%;
+  bottom: 10%;
+  width: 7rem;
+  height: 7rem;
+  background: rgba(255, 255, 255, 0.18);
+  animation: orb-drift-five 16s ease-in-out infinite alternate;
+}
+
+.ambient-orbs + * {
+  position: relative;
+  z-index: 1;
+}
+
 .animate-fade-up {
   animation: fade-up 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -163,6 +242,51 @@ body {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes orb-drift-one {
+  from {
+    transform: translate3d(-1rem, 0, 0) scale(0.92);
+  }
+  to {
+    transform: translate3d(8rem, 18rem, 0) scale(1.18);
+  }
+}
+
+@keyframes orb-drift-two {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-10rem, 20rem, 0) scale(0.82);
+  }
+}
+
+@keyframes orb-drift-three {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.86);
+  }
+  to {
+    transform: translate3d(14rem, -8rem, 0) scale(1.12);
+  }
+}
+
+@keyframes orb-drift-four {
+  from {
+    transform: translate3d(0, 0, 0) scale(1.08);
+  }
+  to {
+    transform: translate3d(-16rem, -12rem, 0) scale(0.9);
+  }
+}
+
+@keyframes orb-drift-five {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+  to {
+    transform: translate3d(12rem, -16rem, 0) scale(1.25);
   }
 }
 

@@ -5,23 +5,23 @@ import { useState } from "react";
 
 const images = [
   {
-    src: "/images/logo-wide.jpeg",
-    alt: "Logo APEX LINER horizontal",
+    src: "/images/solar-film.svg",
+    alt: "Illustration films solaires bâtiment",
     className: "md:col-span-2",
   },
   {
-    src: "/images/logo-vertical.jpeg",
-    alt: "Logo APEX LINER vertical",
+    src: "/images/covering.svg",
+    alt: "Illustration covering",
     className: "md:row-span-2",
   },
   {
-    src: "/images/reference-01.jpg",
-    alt: "Référence visuelle sur ordinateur",
+    src: "/images/signage.svg",
+    alt: "Illustration marquage publicitaire",
     className: "",
   },
   {
-    src: "/images/reference-02.jpg",
-    alt: "Référence visuelle responsive",
+    src: "/images/adhesive-window.svg",
+    alt: "Illustration films adhésifs pour vitrages",
     className: "",
   },
 ];
@@ -48,7 +48,7 @@ export function GallerySection() {
               <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-68 grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-90" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
               <span className="absolute bottom-5 left-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/65">
-                APEX LINER
+                Référence visuelle
               </span>
             </button>
           ))}

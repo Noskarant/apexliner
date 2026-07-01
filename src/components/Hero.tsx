@@ -41,10 +41,10 @@ export function Hero() {
 
         <div className="lg:hidden">
           <div className="flex snap-x gap-4 overflow-x-auto pb-4">
-            {["/images/logo-wide.jpeg", "/images/reference-01.jpg", "/images/logo-vertical.jpeg"].map((src) => (
+            {["/images/solar-film.svg", "/images/covering.svg", "/images/signage.svg"].map((src) => (
               <div key={src} className="relative h-72 min-w-[72vw] snap-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={src} alt="" className="h-full w-full object-cover opacity-75 grayscale" />
+                <img src={src} alt="" className="h-full w-full object-cover opacity-80 grayscale" />
               </div>
             ))}
           </div>
