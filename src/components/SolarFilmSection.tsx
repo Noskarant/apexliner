@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const benefits = [
   "Réduction de la chaleur",
   "Protection UV",
@@ -19,6 +21,13 @@ export function SolarFilmSection() {
         </div>
 
         <div className="reveal rounded-[2rem] border border-white/10 bg-[#0d0d10] p-6 shadow-2xl shadow-black/30 sm:p-8">
+          <div className="relative mb-7 h-72 overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-950">
+            <Image src="/images/projects-web/IMG_0410.jpg" alt="Films adhésifs d'intimité posés sur vitrages intérieurs" fill sizes="(max-width: 1024px) 100vw, 620px" className="object-cover opacity-[0.82] saturate-[0.84]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+            <span className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-black/45 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/72 backdrop-blur">
+              Film adhésif vitrage
+            </span>
+          </div>
           <p className="text-lg leading-8 text-white/65">
             Le film solaire permet d’améliorer le confort thermique, de limiter l’éblouissement, de protéger les vitrages et de valoriser les bâtiments sans travaux lourds. APEX LINER travaille avec des films professionnels adaptés aux besoins des particuliers, entreprises, commerces et bâtiments tertiaires.
           </p>

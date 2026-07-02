@@ -142,7 +142,7 @@ body {
   top: 18%;
   width: 11rem;
   height: 11rem;
-  background: rgba(14, 165, 233, 0.42);
+  background: rgba(245, 245, 245, 0.26);
   animation: orb-drift-one 18s ease-in-out infinite alternate;
 }
 
@@ -151,7 +151,7 @@ body {
   top: 16%;
   width: 15rem;
   height: 15rem;
-  background: rgba(148, 163, 184, 0.32);
+  background: rgba(120, 125, 132, 0.32);
   animation: orb-drift-two 22s ease-in-out infinite alternate;
 }
 
@@ -160,7 +160,7 @@ body {
   top: 56%;
   width: 9rem;
   height: 9rem;
-  background: rgba(56, 189, 248, 0.28);
+  background: rgba(255, 255, 255, 0.18);
   animation: orb-drift-three 20s ease-in-out infinite alternate;
 }
 
@@ -169,7 +169,7 @@ body {
   bottom: 12%;
   width: 12rem;
   height: 12rem;
-  background: rgba(99, 102, 241, 0.24);
+  background: rgba(92, 96, 104, 0.28);
   animation: orb-drift-four 24s ease-in-out infinite alternate;
 }
 
@@ -178,7 +178,7 @@ body {
   bottom: 10%;
   width: 7rem;
   height: 7rem;
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(230, 230, 225, 0.2);
   animation: orb-drift-five 16s ease-in-out infinite alternate;
 }
 

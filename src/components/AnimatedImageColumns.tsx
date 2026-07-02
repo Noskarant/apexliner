@@ -2,24 +2,34 @@ import Image from "next/image";
 
 const visualItems = [
   {
-    src: "/images/solar-film.svg",
-    alt: "Illustration de films solaires pour vitrages",
+    src: "/images/projects-web/IMG_0344.jpg",
+    alt: "Pose de film solaire sur vitrages de bâtiment",
     label: "Films solaires",
   },
   {
-    src: "/images/covering.svg",
-    alt: "Illustration covering véhicule",
+    src: "/images/projects-web/IMG_0790.jpg",
+    alt: "Covering moto violet sur Yamaha",
     label: "Covering",
   },
   {
-    src: "/images/signage.svg",
-    alt: "Illustration marquage publicitaire",
+    src: "/images/projects-web/IMG_0323.jpg",
+    alt: "Marquage publicitaire sur vitrine commerciale",
     label: "Marquage",
   },
   {
-    src: "/images/adhesive-window.svg",
-    alt: "Illustration films adhésifs pour vitrages",
+    src: "/images/projects-web/IMG_0410.jpg",
+    alt: "Films adhésifs d'intimité sur vitrages intérieurs",
     label: "Vitrages",
+  },
+  {
+    src: "/images/projects-web/IMG_0750.jpg",
+    alt: "Covering automobile sur véhicule gris mat",
+    label: "Automobile",
+  },
+  {
+    src: "/images/projects-web/IMG_0397.jpg",
+    alt: "Pose de marquage grand format sur bâtiment",
+    label: "Grand format",
   },
 ];
 
@@ -60,7 +70,7 @@ function VisualCard({
 }) {
   return (
     <figure className={`group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-950 shadow-2xl shadow-black/30 ${tall ? "h-80" : "h-64"}`}>
-      <Image src={src} alt={alt} fill sizes="(max-width: 768px) 45vw, 260px" className="object-cover opacity-70 grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-90" />
+      <Image src={src} alt={alt} fill sizes="(max-width: 768px) 45vw, 260px" className="object-cover opacity-[0.75] saturate-[0.82] transition duration-700 group-hover:scale-105 group-hover:opacity-95 group-hover:saturate-100" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
       <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/75 backdrop-blur">
         {label}

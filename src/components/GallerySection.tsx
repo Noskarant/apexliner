@@ -5,23 +5,123 @@ import { useState } from "react";
 
 const images = [
   {
-    src: "/images/solar-film.svg",
-    alt: "Illustration films solaires bâtiment",
+    src: "/images/projects-web/IMG_0344.jpg",
+    alt: "Vitrages de bâtiment avec film solaire",
+    label: "Films solaires",
     className: "md:col-span-2",
   },
   {
-    src: "/images/covering.svg",
-    alt: "Illustration covering",
+    src: "/images/projects-web/IMG_0790.jpg",
+    alt: "Moto Yamaha avec covering violet",
+    label: "Covering moto",
     className: "md:row-span-2",
   },
   {
-    src: "/images/signage.svg",
-    alt: "Illustration marquage publicitaire",
+    src: "/images/projects-web/IMG_0323.jpg",
+    alt: "Marquage commercial sur vitrine Louis Vuitton",
+    label: "Marquage vitrine",
     className: "",
   },
   {
-    src: "/images/adhesive-window.svg",
-    alt: "Illustration films adhésifs pour vitrages",
+    src: "/images/projects-web/IMG_0397.jpg",
+    alt: "Pose de visuel grand format Aqua Parc",
+    label: "Grand format",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0410.jpg",
+    alt: "Film d'intimité sur vitrages intérieurs",
+    label: "Films vitrages",
+    className: "md:col-span-2",
+  },
+  {
+    src: "/images/projects-web/IMG_0750.jpg",
+    alt: "Véhicule gris mat avec covering",
+    label: "Covering auto",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0223.jpg",
+    alt: "Maison en béton avec vitrages traités",
+    label: "Bâtiment",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0224.jpg",
+    alt: "Façade résidentielle avec vitrages sombres",
+    label: "Bâtiment",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0322.jpg",
+    alt: "Façade commerciale avec vitrine habillée",
+    label: "Signalétique",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0400.jpg",
+    alt: "Films adhésifs sur vitrages Aqua Parc",
+    label: "Adhésifs vitrages",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0446.jpg",
+    alt: "Vitrage extérieur avec film sombre réfléchissant",
+    label: "Film solaire",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0490.jpg",
+    alt: "Détail de finition covering automobile",
+    label: "Détail covering",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0498.jpg",
+    alt: "Vitrage extérieur avec film teinté",
+    label: "Films vitrages",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0508.jpg",
+    alt: "Entrée moderne avec vitrage traité",
+    label: "Vitrage",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0789.jpg",
+    alt: "Détail arrière de moto avec covering violet",
+    label: "Détail moto",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0795.jpg",
+    alt: "Réservoir de moto avec covering violet",
+    label: "Covering moto",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0801.jpg",
+    alt: "Détail brillant de covering sur moto Yamaha",
+    label: "Finition covering",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0919.jpg",
+    alt: "Véhicule BMW avec finition gris mat",
+    label: "Automobile",
+    className: "",
+  },
+  {
+    src: "/images/projects-web/IMG_0921.jpg",
+    alt: "BMW gris mat vue avant",
+    label: "Covering auto",
+    className: "md:col-span-2",
+  },
+  {
+    src: "/images/projects-web/IMG_0935.jpg",
+    alt: "BMW gris mat devant bâtiment",
+    label: "Covering auto",
     className: "",
   },
 ];
@@ -45,10 +145,10 @@ export function GallerySection() {
               onClick={() => setSelected(image)}
               className={`group reveal relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-neutral-950 text-left shadow-2xl shadow-black/30 ${image.className}`}
             >
-              <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-68 grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-90" />
+              <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-[0.76] saturate-[0.82] transition duration-700 group-hover:scale-105 group-hover:opacity-95 group-hover:saturate-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
               <span className="absolute bottom-5 left-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/65">
-                Référence visuelle
+                {image.label}
               </span>
             </button>
           ))}

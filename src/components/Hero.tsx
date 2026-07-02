@@ -1,5 +1,20 @@
 import { AnimatedImageColumns } from "@/components/AnimatedImageColumns";
 
+const mobileImages = [
+  {
+    src: "/images/projects-web/IMG_0344.jpg",
+    alt: "Film solaire sur vitrages de bâtiment",
+  },
+  {
+    src: "/images/projects-web/IMG_0790.jpg",
+    alt: "Covering moto violet",
+  },
+  {
+    src: "/images/projects-web/IMG_0323.jpg",
+    alt: "Marquage publicitaire sur vitrine",
+  },
+];
+
 export function Hero() {
   return (
     <section id="accueil" className="relative overflow-hidden pt-32 sm:pt-36">
@@ -41,10 +56,10 @@ export function Hero() {
 
         <div className="lg:hidden">
           <div className="flex snap-x gap-4 overflow-x-auto pb-4">
-            {["/images/solar-film.svg", "/images/covering.svg", "/images/signage.svg"].map((src) => (
-              <div key={src} className="relative h-72 min-w-[72vw] snap-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04]">
+            {mobileImages.map((image) => (
+              <div key={image.src} className="relative h-72 min-w-[72vw] snap-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={src} alt="" className="h-full w-full object-cover opacity-80 grayscale" />
+                <img src={image.src} alt={image.alt} className="h-full w-full object-cover opacity-[0.82] saturate-[0.85]" />
               </div>
             ))}
           </div>
