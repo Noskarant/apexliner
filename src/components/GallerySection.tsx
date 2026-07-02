@@ -11,12 +11,6 @@ const images = [
     className: "md:col-span-2",
   },
   {
-    src: "/images/projects-web/IMG_0790.jpg",
-    alt: "Moto Yamaha avec covering violet",
-    label: "Covering moto",
-    className: "md:row-span-2",
-  },
-  {
     src: "/images/projects-web/IMG_0323.jpg",
     alt: "Marquage commercial sur vitrine Louis Vuitton",
     label: "Marquage vitrine",
@@ -35,20 +29,8 @@ const images = [
     className: "md:col-span-2",
   },
   {
-    src: "/images/projects-web/IMG_0750.jpg",
-    alt: "Véhicule gris mat avec covering",
-    label: "Covering auto",
-    className: "",
-  },
-  {
     src: "/images/projects-web/IMG_0223.jpg",
     alt: "Maison en béton avec vitrages traités",
-    label: "Bâtiment",
-    className: "",
-  },
-  {
-    src: "/images/projects-web/IMG_0224.jpg",
-    alt: "Façade résidentielle avec vitrages sombres",
     label: "Bâtiment",
     className: "",
   },
@@ -105,18 +87,6 @@ const images = [
     alt: "Détail brillant de covering sur moto Yamaha",
     label: "Finition covering",
     className: "",
-  },
-  {
-    src: "/images/projects-web/IMG_0919.jpg",
-    alt: "Véhicule BMW avec finition gris mat",
-    label: "Automobile",
-    className: "",
-  },
-  {
-    src: "/images/projects-web/IMG_0921.jpg",
-    alt: "BMW gris mat vue avant",
-    label: "Covering auto",
-    className: "md:col-span-2",
   },
   {
     src: "/images/projects-web/IMG_0935.jpg",
