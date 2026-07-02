@@ -57,10 +57,10 @@ export function Hero() {
         <div className="lg:hidden">
           <div className="flex snap-x gap-4 overflow-x-auto pb-4">
             {mobileImages.map((image) => (
-              <div key={image.src} className="relative h-72 min-w-[72vw] snap-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04]">
+              <a key={image.src} href={image.src} target="_blank" rel="noreferrer" className="relative h-72 min-w-[72vw] snap-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={image.src} alt={image.alt} className="h-full w-full object-cover opacity-[0.82] saturate-[0.85]" />
-              </div>
+              </a>
             ))}
           </div>
         </div>
