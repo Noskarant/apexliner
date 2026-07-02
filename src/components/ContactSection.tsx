@@ -9,9 +9,18 @@ export function ContactSection() {
 
   function prepareEmail(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const subject = encodeURIComponent(`Demande de devis - ${name || "APEX LINER"}`);
+    const cleanName = name.trim();
+    const cleanEmail = email.trim();
+    const cleanMessage = message.trim();
+    const subject = encodeURIComponent(`Demande de devis APEX LINER - ${cleanName || "nouveau projet"}`);
     const body = encodeURIComponent(
-      [`Nom : ${name}`, `Email : ${email}`, "", "Message :", message].join("\n"),
+      [
+        `Nom : ${cleanName}`,
+        `Email : ${cleanEmail}`,
+        "",
+        "Message :",
+        cleanMessage,
+      ].join("\n"),
     );
     window.location.href = `mailto:Contact@apexliner.ch?subject=${subject}&body=${body}`;
   }
@@ -36,20 +45,23 @@ export function ContactSection() {
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="space-y-2 text-sm font-semibold text-white/70">
               Nom
-              <input value={name} onChange={(event) => setName(event.target.value)} className="field" placeholder="Votre nom" />
+              <input name="name" value={name} onChange={(event) => setName(event.target.value)} className="field" placeholder="Votre nom" required />
             </label>
             <label className="space-y-2 text-sm font-semibold text-white/70">
               Email
-              <input value={email} onChange={(event) => setEmail(event.target.value)} className="field" placeholder="votre@email.ch" type="email" />
+              <input name="email" value={email} onChange={(event) => setEmail(event.target.value)} className="field" placeholder="votre@email.ch" type="email" required />
             </label>
           </div>
           <label className="mt-4 block space-y-2 text-sm font-semibold text-white/70">
             Message
-            <textarea value={message} onChange={(event) => setMessage(event.target.value)} className="field min-h-40 resize-none" placeholder="Décrivez rapidement le projet, le lieu, le type de surface ou le besoin." />
+            <textarea name="message" value={message} onChange={(event) => setMessage(event.target.value)} className="field min-h-40 resize-none" placeholder="Décrivez rapidement le projet, le lieu, le type de surface ou le besoin." required />
           </label>
           <button type="submit" className="btn-primary mt-5 w-full justify-center">
             Préparer l’email
           </button>
+          <p className="mt-3 text-center text-xs leading-relaxed text-white/38">
+            Le bouton ouvre votre application mail avec le message prérempli.
+          </p>
         </form>
       </div>
     </section>
