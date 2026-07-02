@@ -41,7 +41,7 @@ const images = [
     className: "",
   },
   {
-    src: "/images/projects-web/IMG_0400.jpg",
+    src: "/images/projects-web/IMG_0400-mirror-crop.jpg",
     alt: "Films adhésifs sur vitrages Aqua Parc",
     label: "Adhésifs vitrages",
     className: "",
