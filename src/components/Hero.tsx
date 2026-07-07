@@ -1,4 +1,5 @@
 import { AnimatedImageColumns } from "@/components/AnimatedImageColumns";
+import { Logo } from "@/components/Logo";
 import { assetPath } from "@/lib/assetPath";
 
 const mobileImages = [
@@ -27,6 +28,9 @@ export function Hero() {
           <p className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
             Pose professionnelle en Suisse
           </p>
+          <div className="mb-8 flex justify-center lg:justify-start">
+            <Logo hero compact />
+          </div>
           <h1 className="font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.06em] text-white sm:text-6xl lg:text-7xl">
             Films solaires, covering & marquage publicitaire en Suisse
           </h1>
