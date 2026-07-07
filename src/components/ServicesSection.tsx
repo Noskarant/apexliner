@@ -20,9 +20,9 @@ const services = [
   },
   {
     title: "Marquage publicitaire",
-    text: "Création et pose de marquages visibles sur vitrines, véhicules ou supports professionnels, avec une attention particulière portée à la lisibilité et à la finition.",
-    image: "/images/projects-web/IMG_0397.jpg",
-    alt: "Pose de marquage publicitaire grand format",
+    text: "Pose de marquages visibles sur vitrines, véhicules ou supports professionnels, avec une attention particulière portée à la lisibilité et à la finition.",
+    image: "/images/projects-web/marquage-publicitaire-van.jpg",
+    alt: "Marquage publicitaire posé sur véhicule utilitaire",
     position: "object-center",
   },
 ];
