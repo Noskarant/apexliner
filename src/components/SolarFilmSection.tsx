@@ -4,12 +4,18 @@ import Image from "next/image";
 import { useState } from "react";
 
 const benefits = [
-  "Réduction de la chaleur",
-  "Protection UV",
-  "Meilleur confort visuel",
-  "Préservation de l’intimité",
-  "Aspect esthétique discret",
-  "Solution rapide à poser",
+  "Contrôle solaire selon le vitrage",
+  "Réduction de l’éblouissement",
+  "Filtration des UV selon référence",
+  "Confort thermique amélioré",
+  "Finition discrète ou réfléchissante",
+  "Pose sans travaux lourds",
+];
+
+const technicalPoints = [
+  "Solar Screen structure ses films par familles d’usage : contrôle solaire, sécurité, décoration, intimité ou protection UV.",
+  "Le choix du film dépend du vitrage existant, de l’exposition, de la surface vitrée et du rendu recherché.",
+  "Les performances varient selon la référence : rejet d’énergie solaire, transmission lumineuse, réflexion et protection UV doivent être validés projet par projet.",
 ];
 
 export function SolarFilmSection() {
@@ -35,8 +41,20 @@ export function SolarFilmSection() {
               </span>
             </button>
             <p className="text-lg leading-8 text-white/65">
-              Le film solaire permet d’améliorer le confort thermique, de limiter l’éblouissement, de protéger les vitrages et de valoriser les bâtiments sans travaux lourds. APEX LINER travaille avec des films professionnels adaptés aux besoins des particuliers, entreprises, commerces et bâtiments tertiaires.
+              Le film solaire permet d’améliorer le confort thermique, de limiter l’éblouissement et de valoriser les vitrages existants sans travaux lourds. APEX LINER travaille avec des films professionnels adaptés aux besoins des particuliers, entreprises, commerces et bâtiments tertiaires.
             </p>
+            <div className="mt-7 rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/42">
+                Informations techniques
+              </p>
+              <div className="mt-4 grid gap-3">
+                {technicalPoints.map((point) => (
+                  <p key={point} className="text-sm leading-6 text-white/58">
+                    {point}
+                  </p>
+                ))}
+              </div>
+            </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {benefits.map((benefit) => (
                 <div key={benefit} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm font-semibold text-white/75">

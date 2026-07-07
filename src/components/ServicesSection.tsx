@@ -6,21 +6,21 @@ import { useState } from "react";
 const services = [
   {
     title: "Films solaires bâtiment",
-    text: "Réduction de la chaleur, amélioration du confort intérieur, protection contre les UV et optimisation de la luminosité.",
+    text: "Pose de films pour vitrages visant à réduire la chaleur solaire, limiter l’éblouissement, filtrer les UV et améliorer le confort intérieur sans remplacer les vitrages.",
     image: "/images/projects-web/IMG_0344.jpg",
     alt: "Vitrages de bâtiment équipés de film solaire",
     position: "object-[center_42%]",
   },
   {
     title: "Covering",
-    text: "Habillage de surfaces, véhicules ou supports professionnels avec des films de qualité adaptés à chaque usage.",
+    text: "Habillage de véhicules et surfaces avec des films professionnels type 3M ou Techwrap, pensés pour l’esthétique, la protection légère et les finitions propres.",
     image: "/images/projects-web/IMG_0801.jpg",
     alt: "Détail de covering moto violet brillant",
     position: "object-center",
   },
   {
     title: "Marquage publicitaire",
-    text: "Création et pose de marquages visibles, propres et durables pour renforcer l’image de votre entreprise.",
+    text: "Création et pose de marquages visibles sur vitrines, véhicules ou supports professionnels, avec une attention particulière portée à la lisibilité et à la finition.",
     image: "/images/projects-web/IMG_0397.jpg",
     alt: "Pose de marquage publicitaire grand format",
     position: "object-center",
