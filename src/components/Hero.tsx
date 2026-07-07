@@ -1,5 +1,6 @@
 import { AnimatedImageColumns } from "@/components/AnimatedImageColumns";
 import { assetPath } from "@/lib/assetPath";
+import Image from "next/image";
 
 const mobileImages = [
   {
@@ -24,6 +25,16 @@ export function Hero() {
 
       <div className="section-shell relative grid min-h-[calc(100vh-6rem)] items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="max-w-3xl animate-fade-up">
+          <div className="relative mb-6 h-28 w-[min(100%,28rem)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/40 sm:h-32">
+            <Image
+              src="/images/apex-liner-hero-logo.png"
+              alt="APEX LINER"
+              fill
+              sizes="(min-width: 1024px) 448px, 100vw"
+              className="object-cover object-center opacity-90"
+              priority
+            />
+          </div>
           <p className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
             Pose professionnelle en Suisse
           </p>
