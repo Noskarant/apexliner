@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 
 const links = [
   { label: "Accueil", href: "#accueil" },
@@ -16,10 +17,7 @@ export function Header() {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#070708]/70 backdrop-blur-2xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <a href="#accueil" className="sr-only">
-          APEX LINER
-        </a>
-        <div className="hidden w-56 lg:block" aria-hidden="true" />
+        <Logo />
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-white/62 lg:flex">
           {links.map((link) => (

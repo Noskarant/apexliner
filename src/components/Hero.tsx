@@ -1,5 +1,4 @@
 import { AnimatedImageColumns } from "@/components/AnimatedImageColumns";
-import { Logo } from "@/components/Logo";
 import { assetPath } from "@/lib/assetPath";
 
 const mobileImages = [
@@ -25,9 +24,6 @@ export function Hero() {
 
       <div className="section-shell relative grid min-h-[calc(100vh-6rem)] items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="max-w-3xl animate-fade-up">
-          <div className="-ml-3 mb-2 flex justify-center lg:justify-start">
-            <Logo hero compact />
-          </div>
           <p className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
             Pose professionnelle en Suisse
           </p>
