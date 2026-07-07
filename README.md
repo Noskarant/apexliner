@@ -39,4 +39,14 @@ Les placeholders et références peuvent être remplacés sans modifier l’arch
 
 ## Déploiement
 
-Le projet est prêt pour Vercel. Pour connecter `apexliner.ch`, ajouter le domaine dans le projet Vercel, puis configurer les DNS chez le registrar selon les valeurs fournies par Vercel.
+Le projet est configuré pour GitHub Pages via GitHub Actions.
+
+URL de preview GitHub Pages :
+
+```text
+https://noskarant.github.io/apexliner/
+```
+
+Dans GitHub, vérifier que `Settings > Pages > Build and deployment > Source` est configuré sur `GitHub Actions`.
+
+Pour connecter `apexliner.ch` plus tard, ajouter le domaine côté hébergeur choisi puis configurer les DNS chez le registrar.
