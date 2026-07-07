@@ -14,27 +14,29 @@ export function Logo({ compact = false, muted = false, hero = false }: LogoProps
       aria-label="APEX LINER accueil"
     >
       <span
-        className={`relative overflow-hidden transition duration-300 before:absolute before:inset-x-12 before:bottom-7 before:h-8 before:rounded-full before:bg-white/22 before:blur-2xl group-hover:before:bg-white/30 ${
+        className={`relative overflow-visible transition duration-300 before:absolute before:inset-x-10 before:bottom-8 before:h-8 before:rounded-full before:bg-white/18 before:blur-2xl group-hover:before:bg-white/28 ${
           hero
-            ? "h-28 w-[min(88vw,34rem)] sm:h-32"
+            ? "h-24 w-[min(86vw,30rem)] sm:h-28"
             : muted
               ? "h-10 w-44"
               : "h-12 w-56 sm:w-64"
         }`}
-        style={{
-          WebkitMaskImage:
-            "radial-gradient(ellipse at center, black 42%, rgba(0,0,0,0.86) 58%, transparent 76%)",
-          maskImage:
-            "radial-gradient(ellipse at center, black 42%, rgba(0,0,0,0.86) 58%, transparent 76%)",
-        }}
       >
         <Image
-          src="/images/logo-wordmark-crop.jpeg"
+          src="/images/logo-transparent.png"
+          alt=""
+          fill
+          sizes={hero ? "480px" : "256px"}
+          className="object-contain object-center opacity-80 blur-[7px] brightness-0 invert"
+          aria-hidden="true"
+        />
+        <Image
+          src="/images/logo-transparent.png"
           alt="APEX LINER"
           fill
-          sizes={hero ? "544px" : "256px"}
-          className={`object-contain object-center grayscale contrast-125 saturate-0 drop-shadow-[0_0_18px_rgba(255,255,255,0.32)] ${
-            muted ? "opacity-68" : hero ? "opacity-88" : "opacity-90 group-hover:opacity-100"
+          sizes={hero ? "480px" : "256px"}
+          className={`object-contain object-center drop-shadow-[0_8px_16px_rgba(255,255,255,0.18)] ${
+            muted ? "opacity-75" : hero ? "opacity-95" : "opacity-90 group-hover:opacity-100"
           }`}
           priority={hero}
         />
