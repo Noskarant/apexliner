@@ -32,7 +32,7 @@ export function Hero() {
               alt="APEX LINER"
               fill
               sizes="(min-width: 1024px) 448px, 100vw"
-              className="object-cover object-center opacity-95 brightness-[0.72] contrast-[2.8] saturate-0"
+              className="object-cover object-center opacity-90 brightness-[0.88] contrast-[1.75] saturate-0"
               priority
             />
           </div>
