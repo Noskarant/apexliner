@@ -7,13 +7,13 @@ type LogoProps = {
 export function Logo({ compact = false }: LogoProps) {
   return (
     <a href="#accueil" className="group flex items-center gap-3" aria-label="APEX LINER accueil">
-      <span className="relative h-10 w-44 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/30 sm:w-52">
+      <span className="relative h-16 w-52 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/30 sm:h-20 sm:w-64">
         <Image
-          src="/images/logo-wide.jpeg"
+          src="/images/apex-liner-hero-logo.jpeg"
           alt="APEX LINER"
           fill
-          sizes="208px"
-          className="object-cover object-center opacity-95 grayscale"
+          sizes="256px"
+          className="object-cover object-center opacity-95"
         />
       </span>
       {!compact && (
