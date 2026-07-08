@@ -24,17 +24,20 @@ export function Hero() {
       <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
 
       <div className="section-shell relative">
-        <div className="relative mx-auto mb-10 h-44 w-full overflow-hidden rounded-[2rem] border border-white/10 bg-[#070708] shadow-[0_34px_90px_rgba(0,0,0,0.62),0_0_0_1px_rgba(255,255,255,0.04),inset_0_1px_0_rgba(255,255,255,0.10)] sm:h-60 lg:h-72">
+        <div className="relative mx-auto mb-10 h-44 w-full overflow-hidden rounded-[2rem] border border-white/10 bg-[#070708] shadow-[0_44px_110px_rgba(0,0,0,0.72),0_16px_36px_rgba(255,255,255,0.05),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.18),inset_0_-26px_60px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.4deg)] sm:h-60 lg:h-72">
           <div className="absolute inset-0 bg-[#070708]" />
+          <div className="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-white/35" />
+          <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />
           <Image
             src={assetPath("/images/apex-liner-hero-logo.jpeg")}
             alt="APEX LINER"
             fill
             sizes="1180px"
-            className="object-cover object-center"
+            className="object-cover object-center drop-shadow-[0_22px_26px_rgba(0,0,0,0.72)]"
             priority
           />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_34%,rgba(255,255,255,0.16),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.08),transparent_38%,rgba(0,0,0,0.24))]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,rgba(255,255,255,0.22),transparent_31%),linear-gradient(180deg,rgba(255,255,255,0.12),transparent_34%,rgba(0,0,0,0.34))]" />
+          <div className="pointer-events-none absolute inset-0 rounded-[2rem] shadow-[inset_18px_18px_44px_rgba(255,255,255,0.055),inset_-24px_-28px_70px_rgba(0,0,0,0.64)]" />
         </div>
       </div>
 
