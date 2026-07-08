@@ -15,7 +15,7 @@ export default function PolitiqueConfidentialitePage() {
         {
           title: "Responsable du site",
           content: [
-            "Le site appartient à Romain. Les informations complètes seront précisées lorsque le nom administratif définitif sera fourni.",
+            "Le site appartient à SERVE Romain. Les informations administratives complémentaires seront précisées ultérieurement.",
             "Pour toute demande liée aux données personnelles : Contact@apexliner.ch",
           ],
         },

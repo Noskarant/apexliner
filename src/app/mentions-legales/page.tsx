@@ -15,7 +15,7 @@ export default function MentionsLegalesPage() {
         {
           title: "Éditeur du site",
           content: [
-            "Le site APEX LINER appartient à Romain. Le nom complet et les informations administratives définitives seront complétés ultérieurement.",
+            "Le site APEX LINER appartient à SERVE Romain. Les informations administratives définitives seront complétées ultérieurement.",
             "Email de contact : Contact@apexliner.ch",
           ],
         },

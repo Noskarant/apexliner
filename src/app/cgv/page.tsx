@@ -36,7 +36,7 @@ export default function CgvPage() {
         {
           title: "Propriété",
           content: [
-            "Le site appartient à Romain. Le nom complet sera ajouté lorsque les informations définitives seront communiquées.",
+            "Le site appartient à SERVE Romain. Les informations administratives complémentaires seront ajoutées lorsque les informations définitives seront communiquées.",
           ],
         },
       ]}
