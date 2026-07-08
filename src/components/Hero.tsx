@@ -25,13 +25,14 @@ export function Hero() {
 
       <div className="section-shell relative grid min-h-[calc(100vh-6rem)] items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="max-w-3xl animate-fade-up">
-          <div className="relative mb-6 h-28 w-[min(100%,28rem)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/40 sm:h-32">
+          <div className="relative mb-6 h-28 w-[min(100%,28rem)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/40 sm:h-32">
+            <div className="absolute inset-0 bg-[#070708]" />
             <Image
               src={assetPath("/images/apex-liner-hero-logo.jpeg")}
               alt="APEX LINER"
               fill
               sizes="(min-width: 1024px) 448px, 100vw"
-              className="object-cover object-center opacity-90"
+              className="object-cover object-center opacity-80 mix-blend-screen"
               priority
             />
           </div>
