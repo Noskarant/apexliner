@@ -23,19 +23,23 @@ export function Hero() {
       <div className="absolute left-1/2 top-0 h-[680px] w-[900px] -translate-x-1/2 rounded-full bg-white/[0.05] blur-3xl" />
       <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
 
-      <div className="section-shell relative grid min-h-[calc(100vh-6rem)] items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="section-shell relative">
+        <div className="relative mx-auto mb-10 h-44 w-full overflow-hidden rounded-[2rem] border border-white/10 bg-[#070708] shadow-[0_34px_90px_rgba(0,0,0,0.62),0_0_0_1px_rgba(255,255,255,0.04),inset_0_1px_0_rgba(255,255,255,0.10)] sm:h-60 lg:h-72">
+          <div className="absolute inset-0 bg-[#070708]" />
+          <Image
+            src={assetPath("/images/apex-liner-hero-logo.jpeg")}
+            alt="APEX LINER"
+            fill
+            sizes="1180px"
+            className="object-cover object-center"
+            priority
+          />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_34%,rgba(255,255,255,0.16),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.08),transparent_38%,rgba(0,0,0,0.24))]" />
+        </div>
+      </div>
+
+      <div className="section-shell relative grid min-h-[calc(100vh-22rem)] items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="max-w-3xl animate-fade-up">
-          <div className="relative mb-6 h-28 w-[min(100%,28rem)] overflow-hidden rounded-2xl border border-[#070708] bg-[#070708] shadow-2xl shadow-black/40 sm:h-32">
-            <div className="absolute inset-0 bg-[#070708]" />
-            <Image
-              src={assetPath("/images/apex-liner-hero-logo.jpeg")}
-              alt="APEX LINER"
-              fill
-              sizes="(min-width: 1024px) 448px, 100vw"
-              className="object-cover object-center"
-              priority
-            />
-          </div>
           <p className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
             Pose professionnelle en Suisse
           </p>
