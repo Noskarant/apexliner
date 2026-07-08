@@ -15,7 +15,7 @@ export function Logo({ compact = false }: LogoProps) {
           alt="APEX LINER"
           fill
           sizes="256px"
-          className="object-cover object-center opacity-95 brightness-[1.05] contrast-[1.08] saturate-0"
+          className="object-cover object-center"
         />
       </span>
       {!compact && (
