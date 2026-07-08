@@ -1,6 +1,7 @@
  "use client";
 
 import Image from "next/image";
+import { assetPath } from "@/lib/assetPath";
 import { useState } from "react";
 
 const visualItems = [
@@ -66,7 +67,7 @@ export function AnimatedImageColumns() {
             Fermer
           </button>
           <div className="relative h-[78vh] w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-black">
-            <Image src={selected.src} alt={selected.alt} fill sizes="90vw" className="object-contain" />
+            <Image src={assetPath(selected.src)} alt={selected.alt} fill sizes="90vw" className="object-contain" />
           </div>
         </div>
       )}
@@ -89,7 +90,7 @@ function VisualCard({
 }) {
   return (
     <button type="button" onClick={onSelect} className={`group relative block w-full cursor-pointer overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-950 text-left shadow-2xl shadow-black/30 ${tall ? "h-80" : "h-64"}`}>
-      <Image src={src} alt={alt} fill sizes="(max-width: 768px) 45vw, 260px" className="object-cover opacity-[0.75] saturate-[0.82] transition duration-700 group-hover:scale-105 group-hover:opacity-95 group-hover:saturate-100" />
+      <Image src={assetPath(src)} alt={alt} fill sizes="(max-width: 768px) 45vw, 260px" className="object-cover opacity-[0.75] saturate-[0.82] transition duration-700 group-hover:scale-105 group-hover:opacity-95 group-hover:saturate-100" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
       <span className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/75 backdrop-blur">
         {label}

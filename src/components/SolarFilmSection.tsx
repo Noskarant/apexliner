@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { assetPath } from "@/lib/assetPath";
 import { useState } from "react";
 
 const benefits = [
@@ -34,7 +35,7 @@ export function SolarFilmSection() {
 
           <div className="reveal rounded-[2rem] border border-white/10 bg-[#0d0d10] p-6 shadow-2xl shadow-black/30 sm:p-8">
             <button type="button" onClick={() => setSelected(true)} className="relative mb-7 block h-72 w-full cursor-pointer overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-950 text-left">
-              <Image src="/images/projects-web/IMG_0410.jpg" alt="Films adhésifs d'intimité posés sur vitrages intérieurs" fill sizes="(max-width: 1024px) 100vw, 620px" className="object-cover opacity-[0.82] saturate-[0.84] transition duration-700 hover:scale-[1.03] hover:opacity-95" />
+              <Image src={assetPath("/images/projects-web/IMG_0410.jpg")} alt="Films adhésifs d'intimité posés sur vitrages intérieurs" fill sizes="(max-width: 1024px) 100vw, 620px" className="object-cover opacity-[0.82] saturate-[0.84] transition duration-700 hover:scale-[1.03] hover:opacity-95" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
               <span className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-black/45 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/72 backdrop-blur">
                 Film adhésif vitrage
@@ -73,7 +74,7 @@ export function SolarFilmSection() {
             Fermer
           </button>
           <div className="relative h-[78vh] w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-black">
-            <Image src="/images/projects-web/IMG_0410.jpg" alt="Films adhésifs d'intimité posés sur vitrages intérieurs" fill sizes="90vw" className="object-contain" />
+            <Image src={assetPath("/images/projects-web/IMG_0410.jpg")} alt="Films adhésifs d'intimité posés sur vitrages intérieurs" fill sizes="90vw" className="object-contain" />
           </div>
         </div>
       )}

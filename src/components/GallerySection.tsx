@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { assetPath } from "@/lib/assetPath";
 import { useState } from "react";
 
 const images = [
@@ -115,7 +116,7 @@ export function GallerySection() {
               onClick={() => setSelected(image)}
               className={`group reveal relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-neutral-950 text-left shadow-2xl shadow-black/30 ${image.className}`}
             >
-              <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-[0.76] saturate-[0.82] transition duration-700 group-hover:scale-105 group-hover:opacity-95 group-hover:saturate-100" />
+              <Image src={assetPath(image.src)} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-[0.76] saturate-[0.82] transition duration-700 group-hover:scale-105 group-hover:opacity-95 group-hover:saturate-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
               <span className="absolute bottom-5 left-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/65">
                 {image.label}
@@ -131,7 +132,7 @@ export function GallerySection() {
             Fermer
           </button>
           <div className="relative h-[78vh] w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-black">
-            <Image src={selected.src} alt={selected.alt} fill sizes="90vw" className="object-contain" />
+            <Image src={assetPath(selected.src)} alt={selected.alt} fill sizes="90vw" className="object-contain" />
           </div>
         </div>
       )}

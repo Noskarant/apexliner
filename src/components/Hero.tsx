@@ -27,7 +27,7 @@ export function Hero() {
         <div className="max-w-3xl animate-fade-up">
           <div className="relative mb-6 h-28 w-[min(100%,28rem)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/40 sm:h-32">
             <Image
-              src="/images/apex-liner-hero-logo.jpeg"
+              src={assetPath("/images/apex-liner-hero-logo.jpeg")}
               alt="APEX LINER"
               fill
               sizes="(min-width: 1024px) 448px, 100vw"

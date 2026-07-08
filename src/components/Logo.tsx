@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/assetPath";
 
 type LogoProps = {
   compact?: boolean;
@@ -9,7 +10,7 @@ export function Logo({ compact = false }: LogoProps) {
     <a href="#accueil" className="group flex items-center gap-3" aria-label="APEX LINER accueil">
       <span className="relative h-16 w-52 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/30 sm:h-20 sm:w-64">
         <Image
-          src="/images/apex-liner-hero-logo.jpeg"
+          src={assetPath("/images/apex-liner-hero-logo.jpeg")}
           alt="APEX LINER"
           fill
           sizes="256px"
