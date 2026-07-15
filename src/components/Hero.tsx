@@ -24,7 +24,7 @@ export function Hero() {
       <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
 
       <div className="section-shell relative">
-        <div className="relative mx-auto mb-6 h-24 w-full overflow-hidden rounded-[1.2rem] border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-60 sm:rounded-[2rem] lg:h-72">
+        <div className="relative mx-auto mb-6 h-24 w-full overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-60 sm:rounded-[2rem] lg:h-72">
           <div className="absolute inset-0 bg-[#070708]" />
           <div className="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-white/35" />
           <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />

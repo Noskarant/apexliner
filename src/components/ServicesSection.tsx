@@ -39,9 +39,9 @@ export function ServicesSection() {
           <h2>Nos services</h2>
         </div>
 
-        <div className="mt-9 grid gap-4 sm:mt-12 md:grid-cols-3 md:gap-5">
+        <div className="mobile-snap-row -mx-4 mt-9 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mt-12 md:mx-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0 md:pb-0">
           {services.map((service, index) => (
-            <article key={service.title} className="group reveal rounded-[1.35rem] border border-white/10 bg-white/[0.035] p-4 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.055] sm:rounded-[1.75rem] sm:p-7">
+            <article key={service.title} className="group reveal w-[82vw] shrink-0 snap-center rounded-[1.35rem] border border-white/10 bg-white/[0.035] p-4 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.055] sm:rounded-[1.75rem] sm:p-7 md:w-auto md:shrink">
               <button type="button" onClick={() => setSelected(service)} className="relative mb-5 block h-52 w-full cursor-pointer overflow-hidden rounded-[1rem] border border-white/10 bg-neutral-950 text-left sm:mb-6 sm:h-48 sm:rounded-[1.25rem]">
                 <Image src={assetPath(service.image)} alt={service.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className={`object-cover ${service.position} opacity-[0.82] saturate-[0.86] transition duration-700 group-hover:scale-[1.05] group-hover:opacity-95 group-hover:saturate-100`} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />

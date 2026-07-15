@@ -11,7 +11,7 @@
 
 html {
   background: var(--background);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     linear-gradient(180deg, #070708 0%, #0a0a0c 42%, #050505 100%);
   color: var(--foreground);
   font-family: var(--font-body), Arial, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 ::selection {
