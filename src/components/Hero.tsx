@@ -31,11 +31,11 @@ export function Hero() {
           <div className="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-white/35" />
           <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />
           <Image
-            src={assetPath("/images/apex-liner-logo-transparent.png")}
+            src={assetPath("/images/apex-liner-hero-logo.jpeg")}
             alt="APEX LINER"
             fill
             sizes="1180px"
-            className="object-contain object-center p-4 drop-shadow-[0_22px_26px_rgba(0,0,0,0.72)] sm:p-8"
+            className="object-cover object-center drop-shadow-[0_22px_26px_rgba(0,0,0,0.72)]"
             priority
           />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,rgba(255,255,255,0.22),transparent_31%),linear-gradient(180deg,rgba(255,255,255,0.12),transparent_34%,rgba(0,0,0,0.34))]" />
