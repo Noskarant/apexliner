@@ -25,8 +25,8 @@ export function SolarFilmSection() {
   return (
     <>
       <section className="border-y border-white/10 bg-white/[0.025] py-16 sm:py-32">
-        <div className="section-shell grid gap-8 sm:gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="reveal">
+        <div className="section-shell grid gap-8 sm:gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="reveal lg:pt-4">
             <p className="eyebrow">Confort thermique</p>
             <h2 className="mt-3 font-display text-[2.35rem] font-extrabold leading-[1] tracking-[-0.055em] text-white sm:mt-4 sm:text-5xl sm:leading-tight">
               Mettre en avant le film solaire

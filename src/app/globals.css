@@ -65,6 +65,7 @@ body {
   font-size: 0.9rem;
   font-weight: 800;
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -207,6 +208,29 @@ body {
   animation: column-down 31s linear infinite;
 }
 
+.mobile-snap-row {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-padding-inline: 0.25rem;
+  touch-action: pan-x;
+}
+
+.mobile-snap-row::-webkit-scrollbar {
+  display: none;
+}
+
+.apex-wordmark {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.76);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(130, 132, 136, 0.7) 38%, rgba(15, 15, 16, 0.95) 54%, rgba(245, 245, 245, 0.78));
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.22)) drop-shadow(0 12px 16px rgba(0, 0, 0, 0.7));
+  text-shadow:
+    0 0 16px rgba(255, 255, 255, 0.18),
+    0 18px 22px rgba(0, 0, 0, 0.72);
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -312,6 +336,7 @@ body {
   .section-shell {
     width: calc(100% - 1.25rem);
     max-width: 100%;
+    min-width: 0;
   }
 
   .section-heading h2 {
@@ -328,6 +353,7 @@ body {
     padding-inline: 1rem;
     text-align: center;
     white-space: normal;
+    font-size: 0.86rem;
   }
 
   .ambient-orbs {

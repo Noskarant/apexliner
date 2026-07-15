@@ -48,12 +48,12 @@ export function AnimatedImageColumns() {
         <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-32 bg-gradient-to-b from-[#070708] to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-t from-[#070708] to-transparent" />
         <div className="grid h-full grid-cols-2 gap-4">
-          <div className="animate-column-up space-y-4">
+          <div className="animate-column-up space-y-4 will-change-transform" style={{ animation: "column-up 28s linear infinite" }}>
             {left.map((item, index) => (
               <VisualCard key={`${item.src}-left-${index}`} {...item} onSelect={() => setSelected(item)} />
             ))}
           </div>
-          <div className="animate-column-down space-y-4 pt-16">
+          <div className="animate-column-down space-y-4 pt-16 will-change-transform" style={{ animation: "column-down 31s linear infinite" }}>
             {right.map((item, index) => (
               <VisualCard key={`${item.src}-right-${index}`} {...item} tall={index % 2 === 0} onSelect={() => setSelected(item)} />
             ))}
