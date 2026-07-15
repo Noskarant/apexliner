@@ -26,20 +26,15 @@ export function Hero() {
       </div>
 
       <div className="section-shell relative">
-        <div className="relative mx-auto mb-6 h-24 w-full overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-60 sm:rounded-[2rem] lg:h-72">
-          <div className="absolute inset-0 bg-[#070708]" />
-          <div className="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-white/35" />
-          <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />
+        <div className="relative mx-auto mb-6 h-20 w-full max-w-[880px] sm:mb-10 sm:h-44 sm:max-w-[980px] lg:h-52">
           <Image
-            src={assetPath("/images/apex-liner-hero-logo.jpeg")}
+            src={assetPath("/images/apex-liner-logo-transparent.png")}
             alt="APEX LINER"
             fill
-            sizes="1180px"
-            className="object-cover object-center drop-shadow-[0_22px_26px_rgba(0,0,0,0.72)]"
+            sizes="980px"
+            className="object-contain object-center drop-shadow-[0_18px_24px_rgba(0,0,0,0.62)]"
             priority
           />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,rgba(255,255,255,0.22),transparent_31%),linear-gradient(180deg,rgba(255,255,255,0.12),transparent_34%,rgba(0,0,0,0.34))]" />
-          <div className="pointer-events-none absolute inset-0 rounded-[2rem] shadow-[inset_18px_18px_44px_rgba(255,255,255,0.055),inset_-24px_-28px_70px_rgba(0,0,0,0.64)]" />
         </div>
       </div>
 
