@@ -19,9 +19,11 @@ const mobileImages = [
 
 export function Hero() {
   return (
-    <section id="accueil" className="relative overflow-hidden pt-20 sm:pt-36">
-      <div className="absolute left-1/2 top-0 h-[680px] w-[900px] -translate-x-1/2 rounded-full bg-white/[0.05] blur-3xl" />
-      <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
+    <section id="accueil" className="relative pt-20 sm:pt-36">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute left-1/2 top-0 h-[680px] w-[900px] -translate-x-1/2 rounded-full bg-white/[0.05] blur-3xl" />
+        <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
+      </div>
 
       <div className="section-shell relative">
         <div className="relative mx-auto mb-6 h-24 w-full overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-60 sm:rounded-[2rem] lg:h-72">
