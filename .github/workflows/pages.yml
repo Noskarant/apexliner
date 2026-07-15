@@ -38,7 +38,7 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: "/apexliner"
 
       - name: Disable Jekyll
-        run: touch out/.nojekyll
+        run: touch .next-github-pages/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -46,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: .next-github-pages
 
   deploy:
     environment:
