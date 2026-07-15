@@ -41,18 +41,19 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="section-shell relative grid min-w-0 items-center gap-10 pb-16 sm:gap-14 sm:pb-0 lg:min-h-[calc(100vh-22rem)] lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="min-w-0 max-w-3xl animate-fade-up overflow-hidden">
+      <div className="section-shell relative grid min-w-0 max-w-full items-center gap-10 overflow-hidden pb-16 sm:gap-14 sm:overflow-visible sm:pb-0 lg:min-h-[calc(100vh-22rem)] lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="min-w-0 max-w-full animate-fade-up overflow-hidden sm:max-w-3xl">
           <p className="mb-4 inline-flex max-w-full rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-white/60 sm:mb-6 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
             Pose professionnelle en Suisse
           </p>
-          <h1 className="max-w-full font-display text-[2.15rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-white min-[390px]:text-[2.35rem] sm:text-6xl sm:leading-[0.98] sm:tracking-[-0.06em] lg:text-7xl">
+          <h1 className="max-w-full overflow-hidden font-display text-[2.05rem] font-extrabold leading-[1.03] tracking-[-0.04em] text-white min-[390px]:text-[2.2rem] sm:text-6xl sm:leading-[0.98] sm:tracking-[-0.06em] lg:text-7xl">
             <span className="block sm:inline">Films solaires,</span>{" "}
             <span className="block sm:inline">covering &</span>{" "}
-            <span className="block sm:inline">marquage publicitaire</span>{" "}
+            <span className="block sm:inline">marquage</span>{" "}
+            <span className="block sm:inline">publicitaire</span>{" "}
             <span className="block sm:inline">en Suisse</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-[0.96rem] leading-7 text-white/64 sm:mt-7 sm:text-xl sm:leading-8">
+          <p className="mt-4 max-w-full overflow-hidden text-[0.96rem] leading-7 text-white/64 sm:mt-7 sm:max-w-2xl sm:text-xl sm:leading-8">
             APEX LINER accompagne les professionnels et particuliers dans la pose de films solaires pour bâtiments, de covering et de marquage publicitaire, avec des solutions durables, esthétiques et adaptées à chaque projet.
           </p>
           <div className="mt-6 flex min-w-0 flex-col gap-3 sm:mt-9 sm:flex-row">

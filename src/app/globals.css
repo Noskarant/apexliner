@@ -11,6 +11,7 @@
 
 html {
   background: var(--background);
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     linear-gradient(180deg, #070708 0%, #0a0a0c 42%, #050505 100%);
   color: var(--foreground);
   font-family: var(--font-body), Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -301,8 +303,15 @@ body {
 }
 
 @media (max-width: 640px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .section-shell {
-    width: min(100% - 1.25rem, 1180px);
+    width: calc(100% - 1.25rem);
+    max-width: 100%;
   }
 
   .section-heading h2 {
@@ -312,8 +321,13 @@ body {
 
   .btn-primary,
   .btn-secondary {
+    max-width: 100%;
     width: 100%;
     justify-content: center;
+    overflow: hidden;
+    padding-inline: 1rem;
+    text-align: center;
+    white-space: normal;
   }
 
   .ambient-orbs {
