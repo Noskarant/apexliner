@@ -19,12 +19,12 @@ const mobileImages = [
 
 export function Hero() {
   return (
-    <section id="accueil" className="relative overflow-hidden pt-24 sm:pt-36">
+    <section id="accueil" className="relative overflow-hidden pt-20 sm:pt-36">
       <div className="absolute left-1/2 top-0 h-[680px] w-[900px] -translate-x-1/2 rounded-full bg-white/[0.05] blur-3xl" />
       <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
 
       <div className="section-shell relative">
-        <div className="relative mx-auto mb-7 h-28 w-full overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#070708] shadow-[0_28px_70px_rgba(0,0,0,0.66),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-60 sm:rounded-[2rem] lg:h-72">
+        <div className="relative mx-auto mb-6 h-24 w-full overflow-hidden rounded-[1.2rem] border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-60 sm:rounded-[2rem] lg:h-72">
           <div className="absolute inset-0 bg-[#070708]" />
           <div className="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-white/35" />
           <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />
@@ -41,22 +41,25 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="section-shell relative grid items-center gap-10 pb-16 sm:gap-14 sm:pb-0 lg:min-h-[calc(100vh-22rem)] lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="max-w-3xl animate-fade-up">
-          <p className="mb-5 inline-flex max-w-full rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/60 sm:mb-6 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
+      <div className="section-shell relative grid min-w-0 items-center gap-10 pb-16 sm:gap-14 sm:pb-0 lg:min-h-[calc(100vh-22rem)] lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="min-w-0 max-w-3xl animate-fade-up overflow-hidden">
+          <p className="mb-4 inline-flex max-w-full rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-white/60 sm:mb-6 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
             Pose professionnelle en Suisse
           </p>
-          <h1 className="font-display text-[2.72rem] font-extrabold leading-[0.96] tracking-[-0.06em] text-white min-[390px]:text-5xl sm:text-6xl lg:text-7xl">
-            Films solaires, covering & marquage publicitaire en Suisse
+          <h1 className="max-w-full font-display text-[2.15rem] font-extrabold leading-[1.02] tracking-[-0.045em] text-white min-[390px]:text-[2.35rem] sm:text-6xl sm:leading-[0.98] sm:tracking-[-0.06em] lg:text-7xl">
+            <span className="block sm:inline">Films solaires,</span>{" "}
+            <span className="block sm:inline">covering &</span>{" "}
+            <span className="block sm:inline">marquage publicitaire</span>{" "}
+            <span className="block sm:inline">en Suisse</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-white/64 sm:mt-7 sm:text-xl sm:leading-8">
+          <p className="mt-4 max-w-2xl text-[0.96rem] leading-7 text-white/64 sm:mt-7 sm:text-xl sm:leading-8">
             APEX LINER accompagne les professionnels et particuliers dans la pose de films solaires pour bâtiments, de covering et de marquage publicitaire, avec des solutions durables, esthétiques et adaptées à chaque projet.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
-            <a href="mailto:Contact@apexliner.ch" className="btn-primary justify-center">
+          <div className="mt-6 flex min-w-0 flex-col gap-3 sm:mt-9 sm:flex-row">
+            <a href="mailto:Contact@apexliner.ch" className="btn-primary min-w-0 justify-center whitespace-normal text-center">
               Demander un devis
             </a>
-            <a href="#services" className="btn-secondary justify-center">
+            <a href="#services" className="btn-secondary min-w-0 justify-center whitespace-normal text-center">
               Voir les services
             </a>
           </div>
