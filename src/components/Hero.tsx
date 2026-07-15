@@ -1,5 +1,6 @@
 import { AnimatedImageColumns } from "@/components/AnimatedImageColumns";
 import { assetPath } from "@/lib/assetPath";
+import Image from "next/image";
 
 const mobileImages = [
   {
@@ -23,7 +24,21 @@ export function Hero() {
       <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
 
       <div className="section-shell relative">
-        <HeroLogoMark />
+        <div className="relative mx-auto mb-6 h-24 w-full overflow-hidden rounded-[1.2rem] border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-60 sm:rounded-[2rem] lg:h-72">
+          <div className="absolute inset-0 bg-[#070708]" />
+          <div className="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-white/35" />
+          <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />
+          <Image
+            src={assetPath("/images/apex-liner-hero-logo.jpeg")}
+            alt="APEX LINER"
+            fill
+            sizes="1180px"
+            className="object-cover object-center drop-shadow-[0_22px_26px_rgba(0,0,0,0.72)]"
+            priority
+          />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,rgba(255,255,255,0.22),transparent_31%),linear-gradient(180deg,rgba(255,255,255,0.12),transparent_34%,rgba(0,0,0,0.34))]" />
+          <div className="pointer-events-none absolute inset-0 rounded-[2rem] shadow-[inset_18px_18px_44px_rgba(255,255,255,0.055),inset_-24px_-28px_70px_rgba(0,0,0,0.64)]" />
+        </div>
       </div>
 
       <div className="section-shell relative grid min-w-0 max-w-full items-center gap-10 pb-16 sm:gap-14 sm:pb-0 lg:min-h-[calc(100vh-22rem)] lg:grid-cols-[1.05fr_0.95fr]">
@@ -75,19 +90,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  );
-}
-
-function HeroLogoMark() {
-  return (
-    <div className="mx-auto mb-6 flex w-full max-w-[920px] flex-col items-center justify-center bg-transparent py-2 sm:mb-10 sm:max-w-[1080px] sm:py-4">
-      <span className="relative mb-1 block h-8 w-10 sm:mb-2 sm:h-14 sm:w-20" aria-hidden="true">
-        <span className="absolute left-1/2 top-0 h-7 w-7 -translate-x-1/2 rotate-45 border-l-2 border-t-2 border-white/75 shadow-[0_0_18px_rgba(255,255,255,0.42)] sm:h-12 sm:w-12 sm:border-l-[3px] sm:border-t-[3px]" />
-        <span className="absolute left-1/2 top-[0.86rem] h-5 w-5 -translate-x-1/2 rotate-45 border-l-2 border-t-2 border-white/55 sm:top-6 sm:h-8 sm:w-8" />
-      </span>
-      <p className="apex-wordmark text-center text-[1.65rem] font-black uppercase leading-none tracking-[-0.08em] text-transparent sm:text-[4.5rem] lg:text-[5.6rem]">
-        APEX<span className="mx-1 sm:mx-2" />LINER<span className="text-[0.55em] tracking-[-0.05em]">.CH</span>
-      </p>
-    </div>
   );
 }
