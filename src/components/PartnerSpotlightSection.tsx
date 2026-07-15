@@ -39,7 +39,7 @@ export function PartnerSpotlightSection() {
             Swiss Clean Detailing
           </h2>
           <p className="mt-6 text-lg leading-8 text-white/62">
-            APEX LINER mentionne Swiss Clean Detailing parmi ses partenaires. Les visuels ci-dessous illustrent un travail de préparation automobile, polissage et protection céramique réalisé dans un environnement professionnel.
+            APEX LINER collabore avec Swiss Clean Detailing, spécialiste de la préparation automobile, du polissage et de la protection céramique. Les visuels ci-dessous présentent leur travail en atelier, avec un haut niveau d’exigence sur la finition.
           </p>
           <div className="mt-8 grid gap-3 text-sm font-semibold text-white/58 sm:grid-cols-2">
             <span className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3">Polissage céramique</span>
