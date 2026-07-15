@@ -79,16 +79,16 @@ export function Hero() {
         <div className="hidden animate-fade-up lg:block [animation-delay:160ms]">
           <AnimatedImageColumns />
         </div>
+      </div>
 
-        <div className="lg:hidden">
-          <div className="mobile-snap-row flex w-full min-w-0 max-w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-4">
-            {mobileImages.map((image) => (
-              <a key={image.src} href={assetPath(image.src)} target="_blank" rel="noreferrer" className="relative h-64 w-[78vw] shrink-0 snap-center overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.04]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={assetPath(image.src)} alt={image.alt} className="h-full w-full object-cover opacity-[0.82] saturate-[0.85]" />
-              </a>
-            ))}
-          </div>
+      <div className="section-shell relative lg:hidden">
+        <div className="mobile-snap-row -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-4">
+          {mobileImages.map((image) => (
+            <a key={image.src} href={assetPath(image.src)} target="_blank" rel="noreferrer" className="relative h-64 w-[78vw] shrink-0 snap-center overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.04]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={assetPath(image.src)} alt={image.alt} className="h-full w-full object-cover opacity-[0.82] saturate-[0.85]" />
+            </a>
+          ))}
         </div>
       </div>
     </section>
