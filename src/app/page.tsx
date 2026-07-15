@@ -4,6 +4,7 @@ import { GallerySection } from "@/components/GallerySection";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { PartnersSection } from "@/components/PartnersSection";
+import { PartnerSpotlightSection } from "@/components/PartnerSpotlightSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { SolarFilmSection } from "@/components/SolarFilmSection";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <ServicesSection />
       <SolarFilmSection />
       <PartnersSection />
+      <PartnerSpotlightSection />
       <GallerySection />
       <ContactSection />
       <Footer />

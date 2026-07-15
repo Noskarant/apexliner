@@ -15,7 +15,9 @@ export default function PolitiqueConfidentialitePage() {
         {
           title: "Responsable du site",
           content: [
-            "Le site appartient à SERVE Romain. Les informations administratives complémentaires seront précisées ultérieurement.",
+            "Responsable du site : APEX LINER Sàrl.",
+            "IDE / UID : CHE-326.949.404.",
+            "Adresse de domicile : Rue de l'Industrie 28, c/o AMAFINANCE SA, 1030 Bussigny, Suisse.",
             "Pour toute demande liée aux données personnelles : Contact@apexliner.ch",
           ],
         },

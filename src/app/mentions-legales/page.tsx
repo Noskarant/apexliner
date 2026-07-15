@@ -15,7 +15,13 @@ export default function MentionsLegalesPage() {
         {
           title: "Éditeur du site",
           content: [
-            "Le site APEX LINER appartient à SERVE Romain. Les informations administratives définitives seront complétées ultérieurement.",
+            "Raison sociale : APEX LINER Sàrl.",
+            "Forme juridique : Société à responsabilité limitée (Sàrl).",
+            "Date d'inscription : 24 juin 2026.",
+            "Numéro d'identification IDE / UID : CHE-326.949.404.",
+            "Registre du commerce : Canton de Vaud, Suisse.",
+            "Siège : Bussigny.",
+            "Adresse de domicile : Rue de l'Industrie 28, c/o AMAFINANCE SA, 1030 Bussigny, Suisse.",
             "Email de contact : Contact@apexliner.ch",
           ],
         },
@@ -29,7 +35,8 @@ export default function MentionsLegalesPage() {
         {
           title: "Activité présentée",
           content: [
-            "APEX LINER présente des prestations de pose de films solaires pour bâtiments, covering, films adhésifs pour vitrages et marquage publicitaire.",
+            "APEX LINER présente des prestations de pose de films solaires, pose de films adhésifs sur tout véhicule, covering, marquage, vitrophanie et enseignes.",
+            "L'activité couvre plus largement les prestations liées au domaine de la publicité visuelle, selon les besoins du projet.",
             "Les informations présentes sur le site sont fournies à titre indicatif et peuvent être mises à jour.",
           ],
         },

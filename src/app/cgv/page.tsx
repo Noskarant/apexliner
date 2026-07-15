@@ -15,7 +15,7 @@ export default function CgvPage() {
         {
           title: "Objet du site",
           content: [
-            "Le site APEX LINER présente des prestations de pose de films solaires, covering, films adhésifs pour vitrages et marquage publicitaire.",
+            "Le site APEX LINER présente des prestations de pose de films solaires, pose de films adhésifs sur véhicules, covering, marquage, vitrophanie, enseignes et publicité visuelle.",
             "Il s'agit d'un site vitrine destiné à présenter l'activité et à faciliter la prise de contact.",
           ],
         },
@@ -36,7 +36,7 @@ export default function CgvPage() {
         {
           title: "Propriété",
           content: [
-            "Le site appartient à SERVE Romain. Les informations administratives complémentaires seront ajoutées lorsque les informations définitives seront communiquées.",
+            "Le site présente l'activité d'APEX LINER Sàrl, société à responsabilité limitée inscrite le 24 juin 2026, IDE / UID CHE-326.949.404, registre du commerce du Canton de Vaud.",
           ],
         },
       ]}

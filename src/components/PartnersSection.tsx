@@ -15,6 +15,10 @@ const partners = [
     name: "Vitroconcept.ch",
     text: "Collaboration mentionnée par le client pour l’étude et l’obtention de devis détaillés selon les besoins du projet.",
   },
+  {
+    name: "Swiss Clean Detailing",
+    text: "Partenaire mentionné par le client pour des prestations automobiles de préparation, polissage céramique et finition.",
+  },
 ];
 
 export function PartnersSection() {
@@ -30,7 +34,7 @@ export function PartnersSection() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {partners.map((partner) => (
           <div key={partner.name} className="reveal rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-6">
             <p className="font-display text-xl font-bold tracking-[-0.04em] text-white">{partner.name}</p>
