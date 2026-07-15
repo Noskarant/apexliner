@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#070708]/70 backdrop-blur-2xl">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-end px-5 sm:px-8 lg:justify-between">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-end px-4 sm:h-20 sm:px-8 lg:justify-between">
         <nav className="hidden items-center gap-8 text-sm font-medium text-white/62 lg:flex">
           {links.map((link) => (
             <a key={link.href} href={link.href} className="transition hover:text-white">
@@ -46,7 +46,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-white/10 bg-[#070708]/95 px-5 py-5 backdrop-blur-2xl lg:hidden">
+        <div className="border-t border-white/10 bg-[#070708]/95 px-4 py-4 backdrop-blur-2xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1">
             {links.map((link) => (
               <a

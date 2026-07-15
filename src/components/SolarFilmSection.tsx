@@ -24,28 +24,28 @@ export function SolarFilmSection() {
 
   return (
     <>
-      <section className="border-y border-white/10 bg-white/[0.025] py-24 sm:py-32">
-        <div className="section-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <section className="border-y border-white/10 bg-white/[0.025] py-16 sm:py-32">
+        <div className="section-shell grid gap-8 sm:gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="reveal">
             <p className="eyebrow">Confort thermique</p>
-            <h2 className="mt-4 font-display text-4xl font-extrabold leading-tight tracking-[-0.05em] text-white sm:text-5xl">
+            <h2 className="mt-3 font-display text-[2.35rem] font-extrabold leading-[1] tracking-[-0.055em] text-white sm:mt-4 sm:text-5xl sm:leading-tight">
               Mettre en avant le film solaire
             </h2>
           </div>
 
-          <div className="reveal rounded-[2rem] border border-white/10 bg-[#0d0d10] p-6 shadow-2xl shadow-black/30 sm:p-8">
-            <button type="button" onClick={() => setSelected(true)} className="relative mb-7 block h-72 w-full cursor-pointer overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-950 text-left">
+          <div className="reveal rounded-[1.35rem] border border-white/10 bg-[#0d0d10] p-4 shadow-2xl shadow-black/30 sm:rounded-[2rem] sm:p-8">
+            <button type="button" onClick={() => setSelected(true)} className="relative mb-5 block h-56 w-full cursor-pointer overflow-hidden rounded-[1rem] border border-white/10 bg-neutral-950 text-left sm:mb-7 sm:h-72 sm:rounded-[1.5rem]">
               <Image src={assetPath("/images/projects-web/IMG_0410.jpg")} alt="Films adhésifs d'intimité posés sur vitrages intérieurs" fill sizes="(max-width: 1024px) 100vw, 620px" className="object-cover opacity-[0.82] saturate-[0.84] transition duration-700 hover:scale-[1.03] hover:opacity-95" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-              <span className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-black/45 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/72 backdrop-blur">
+              <span className="absolute bottom-3 left-3 rounded-full border border-white/10 bg-black/45 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.15em] text-white/72 backdrop-blur sm:bottom-4 sm:left-4 sm:text-xs sm:tracking-[0.18em]">
                 Film adhésif vitrage
               </span>
             </button>
-            <p className="text-lg leading-8 text-white/65">
+            <p className="text-base leading-7 text-white/65 sm:text-lg sm:leading-8">
               Le film solaire permet d’améliorer le confort thermique, de limiter l’éblouissement et de valoriser les vitrages existants sans travaux lourds. APEX LINER travaille avec des films professionnels adaptés aux besoins des particuliers, entreprises, commerces et bâtiments tertiaires.
             </p>
-            <div className="mt-7 rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/42">
+            <div className="mt-6 rounded-[1.2rem] border border-white/10 bg-white/[0.035] p-4 sm:mt-7 sm:rounded-[1.5rem] sm:p-5">
+              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/42 sm:text-xs sm:tracking-[0.22em]">
                 Informations techniques
               </p>
               <div className="mt-4 grid gap-3">
@@ -56,9 +56,9 @@ export function SolarFilmSection() {
                 ))}
               </div>
             </div>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="mt-6 grid gap-2.5 sm:mt-8 sm:grid-cols-2 sm:gap-3">
               {benefits.map((benefit) => (
-                <div key={benefit} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm font-semibold text-white/75">
+                <div key={benefit} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm font-semibold leading-5 text-white/75">
                   <span className="h-1.5 w-1.5 rounded-full bg-sky-300" />
                   {benefit}
                 </div>
@@ -70,10 +70,10 @@ export function SolarFilmSection() {
 
       {selected && (
         <div className="fixed inset-0 z-[90] grid place-items-center bg-black/85 p-4 backdrop-blur-xl" onClick={() => setSelected(false)}>
-          <button type="button" className="absolute right-5 top-5 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-white">
+          <button type="button" className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-white">
             Fermer
           </button>
-          <div className="relative h-[78vh] w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-black">
+          <div className="relative h-[76vh] w-full max-w-5xl overflow-hidden rounded-[1.25rem] border border-white/10 bg-black sm:rounded-[2rem]">
             <Image src={assetPath("/images/projects-web/IMG_0410.jpg")} alt="Films adhésifs d'intimité posés sur vitrages intérieurs" fill sizes="90vw" className="object-contain" />
           </div>
         </div>

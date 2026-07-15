@@ -31,17 +31,17 @@ export function PartnerSpotlightSection() {
   const [selected, setSelected] = useState<(typeof partnerImages)[number] | null>(null);
 
   return (
-    <section className="section-shell py-20 sm:py-28">
-      <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+    <section className="section-shell py-16 sm:py-28">
+      <div className="grid gap-9 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:gap-12">
         <div className="reveal">
           <p className="eyebrow">Partenaire</p>
-          <h2 className="font-display text-5xl font-bold leading-[0.92] tracking-[-0.07em] text-white sm:text-6xl">
+          <h2 className="mt-3 font-display text-[2.7rem] font-bold leading-[0.94] tracking-[-0.07em] text-white min-[390px]:text-5xl sm:text-6xl">
             Swiss Clean Detailing
           </h2>
-          <p className="mt-6 text-lg leading-8 text-white/62">
+          <p className="mt-5 text-base leading-7 text-white/62 sm:mt-6 sm:text-lg sm:leading-8">
             APEX LINER collabore avec Swiss Clean Detailing, spécialiste de la préparation automobile, du polissage et de la protection céramique. Les visuels ci-dessous présentent leur travail en atelier, avec un haut niveau d’exigence sur la finition.
           </p>
-          <div className="mt-8 grid gap-3 text-sm font-semibold text-white/58 sm:grid-cols-2">
+          <div className="mt-6 grid grid-cols-2 gap-2.5 text-xs font-semibold text-white/58 sm:mt-8 sm:gap-3 sm:text-sm">
             <span className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3">Polissage céramique</span>
             <span className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3">Préparation carrosserie</span>
             <span className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3">Finition automobile</span>
@@ -49,13 +49,13 @@ export function PartnerSpotlightSection() {
           </div>
         </div>
 
-        <div className="grid auto-rows-[220px] gap-4 md:grid-cols-3">
+        <div className="grid auto-rows-[170px] grid-cols-2 gap-3 sm:auto-rows-[210px] md:grid-cols-3 md:gap-4">
           {partnerImages.map((image) => (
             <button
               key={image.src}
               type="button"
               onClick={() => setSelected(image)}
-              className={`group reveal relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-neutral-950 shadow-2xl shadow-black/35 ${image.className}`}
+              className={`group reveal relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-neutral-950 shadow-2xl shadow-black/35 sm:rounded-[1.75rem] ${image.className}`}
             >
               <Image
                 src={assetPath(image.src)}
@@ -72,10 +72,10 @@ export function PartnerSpotlightSection() {
 
       {selected && (
         <div className="fixed inset-0 z-[90] grid place-items-center bg-black/85 p-4 backdrop-blur-xl" onClick={() => setSelected(null)}>
-          <button type="button" className="absolute right-5 top-5 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-white">
+          <button type="button" className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-white">
             Fermer
           </button>
-          <div className="relative h-[78vh] w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-black">
+          <div className="relative h-[76vh] w-full max-w-5xl overflow-hidden rounded-[1.25rem] border border-white/10 bg-black sm:rounded-[2rem]">
             <Image src={assetPath(selected.src)} alt={selected.alt} fill sizes="90vw" className="object-contain" />
           </div>
         </div>

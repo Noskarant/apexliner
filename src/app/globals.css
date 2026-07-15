@@ -299,3 +299,28 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+@media (max-width: 640px) {
+  .section-shell {
+    width: min(100% - 1.25rem, 1180px);
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2.15rem, 12vw, 3.15rem);
+    line-height: 0.95;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ambient-orbs {
+    opacity: 0.68;
+  }
+
+  .orb {
+    filter: blur(28px);
+  }
+}

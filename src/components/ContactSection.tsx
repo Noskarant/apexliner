@@ -26,22 +26,22 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="section-shell scroll-mt-24 py-24 sm:py-32">
+    <section id="contact" className="section-shell scroll-mt-20 py-16 sm:scroll-mt-24 sm:py-32">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="reveal">
           <p className="eyebrow">Contact</p>
-          <h2 className="mt-4 font-display text-4xl font-extrabold leading-tight tracking-[-0.05em] text-white sm:text-5xl">
+          <h2 className="mt-3 font-display text-[2.35rem] font-extrabold leading-[1] tracking-[-0.055em] text-white sm:mt-4 sm:text-5xl sm:leading-tight">
             Parlons de votre projet
           </h2>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
+          <p className="mt-5 max-w-xl text-base leading-7 text-white/60 sm:mt-6 sm:text-lg sm:leading-8">
             Pour une demande de devis ou une première prise de contact, contactez APEX LINER par email.
           </p>
-          <a href="mailto:Contact@apexliner.ch" className="mt-8 inline-flex text-xl font-bold text-white underline decoration-white/20 underline-offset-8 transition hover:decoration-white">
+          <a href="mailto:Contact@apexliner.ch" className="mt-6 inline-flex break-all text-lg font-bold text-white underline decoration-white/20 underline-offset-8 transition hover:decoration-white sm:mt-8 sm:text-xl">
             Contact@apexliner.ch
           </a>
         </div>
 
-        <form onSubmit={prepareEmail} className="reveal rounded-[2rem] border border-white/10 bg-white/[0.035] p-5 shadow-2xl shadow-black/30 sm:p-8">
+        <form onSubmit={prepareEmail} className="reveal rounded-[1.35rem] border border-white/10 bg-white/[0.035] p-4 shadow-2xl shadow-black/30 sm:rounded-[2rem] sm:p-8">
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="space-y-2 text-sm font-semibold text-white/70">
               Nom

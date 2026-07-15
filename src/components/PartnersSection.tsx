@@ -34,10 +34,10 @@ export function PartnersSection() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-10 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:grid-cols-5">
         {partners.map((partner) => (
-          <div key={partner.name} className="reveal rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-6">
-            <p className="font-display text-xl font-bold tracking-[-0.04em] text-white">{partner.name}</p>
+          <div key={partner.name} className="reveal rounded-[1.25rem] border border-white/10 bg-white/[0.035] p-5 sm:rounded-[1.5rem] sm:p-6">
+            <p className="font-display text-lg font-bold tracking-[-0.04em] text-white sm:text-xl">{partner.name}</p>
             <p className="mt-3 text-sm leading-6 text-white/45">
               {partner.text}
             </p>

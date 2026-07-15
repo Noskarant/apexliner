@@ -19,12 +19,12 @@ const mobileImages = [
 
 export function Hero() {
   return (
-    <section id="accueil" className="relative overflow-hidden pt-32 sm:pt-36">
+    <section id="accueil" className="relative overflow-hidden pt-24 sm:pt-36">
       <div className="absolute left-1/2 top-0 h-[680px] w-[900px] -translate-x-1/2 rounded-full bg-white/[0.05] blur-3xl" />
       <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
 
       <div className="section-shell relative">
-        <div className="relative mx-auto mb-10 h-44 w-full overflow-hidden rounded-[2rem] border border-white/10 bg-[#070708] shadow-[0_44px_110px_rgba(0,0,0,0.72),0_16px_36px_rgba(255,255,255,0.05),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.18),inset_0_-26px_60px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.4deg)] sm:h-60 lg:h-72">
+        <div className="relative mx-auto mb-7 h-28 w-full overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#070708] shadow-[0_28px_70px_rgba(0,0,0,0.66),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-60 sm:rounded-[2rem] lg:h-72">
           <div className="absolute inset-0 bg-[#070708]" />
           <div className="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-white/35" />
           <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />
@@ -41,18 +41,18 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="section-shell relative grid min-h-[calc(100vh-22rem)] items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="section-shell relative grid items-center gap-10 pb-16 sm:gap-14 sm:pb-0 lg:min-h-[calc(100vh-22rem)] lg:grid-cols-[1.05fr_0.95fr]">
         <div className="max-w-3xl animate-fade-up">
-          <p className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
+          <p className="mb-5 inline-flex max-w-full rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/60 sm:mb-6 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
             Pose professionnelle en Suisse
           </p>
-          <h1 className="font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.06em] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="font-display text-[2.72rem] font-extrabold leading-[0.96] tracking-[-0.06em] text-white min-[390px]:text-5xl sm:text-6xl lg:text-7xl">
             Films solaires, covering & marquage publicitaire en Suisse
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/64 sm:text-xl">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-white/64 sm:mt-7 sm:text-xl sm:leading-8">
             APEX LINER accompagne les professionnels et particuliers dans la pose de films solaires pour bâtiments, de covering et de marquage publicitaire, avec des solutions durables, esthétiques et adaptées à chaque projet.
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
             <a href="mailto:Contact@apexliner.ch" className="btn-primary justify-center">
               Demander un devis
             </a>
@@ -60,11 +60,11 @@ export function Hero() {
               Voir les services
             </a>
           </div>
-          <div className="mt-12 grid max-w-xl grid-cols-3 gap-4 border-t border-white/10 pt-8">
+          <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 border-t border-white/10 pt-6 sm:mt-12 sm:gap-4 sm:pt-8">
             {["Films solaires", "Covering", "Marquage"].map((item) => (
               <div key={item}>
-                <p className="text-xs uppercase tracking-[0.22em] text-white/35">Service</p>
-                <p className="mt-2 text-sm font-semibold text-white/78">{item}</p>
+                <p className="text-[0.62rem] uppercase tracking-[0.18em] text-white/35 sm:text-xs sm:tracking-[0.22em]">Service</p>
+                <p className="mt-2 text-xs font-semibold text-white/78 sm:text-sm">{item}</p>
               </div>
             ))}
           </div>
@@ -75,9 +75,9 @@ export function Hero() {
         </div>
 
         <div className="lg:hidden">
-          <div className="flex snap-x gap-4 overflow-x-auto pb-4">
+          <div className="flex snap-x gap-3 overflow-x-auto pb-4">
             {mobileImages.map((image) => (
-              <a key={image.src} href={assetPath(image.src)} target="_blank" rel="noreferrer" className="relative h-72 min-w-[72vw] snap-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04]">
+              <a key={image.src} href={assetPath(image.src)} target="_blank" rel="noreferrer" className="relative h-64 min-w-[76vw] snap-center overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.04]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={assetPath(image.src)} alt={image.alt} className="h-full w-full object-cover opacity-[0.82] saturate-[0.85]" />
               </a>
