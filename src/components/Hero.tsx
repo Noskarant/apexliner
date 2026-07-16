@@ -26,12 +26,16 @@ export function Hero() {
       </div>
 
       <div className="section-shell relative">
-        <div className="mx-auto mb-6 w-full max-w-[880px] sm:mb-10 sm:max-w-[980px]">
+        <div className="relative mx-auto mb-6 w-full max-w-[880px] sm:mb-10 sm:max-w-[980px]">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10 scale-125 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.16),rgba(255,255,255,0.05)_45%,transparent_72%)] blur-2xl"
+          />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={assetPath("/assets/apexliner-logo.png")}
             alt="APEX LINER"
-            className="block h-auto w-full object-contain"
+            className="relative block h-auto w-full object-contain"
           />
         </div>
       </div>
