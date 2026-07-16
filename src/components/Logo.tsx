@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { assetPath } from "@/lib/assetPath";
 
 type LogoProps = {
@@ -7,15 +6,13 @@ type LogoProps = {
 
 export function Logo({ compact = false }: LogoProps) {
   return (
-    <a href="#accueil" className="group flex items-center gap-3" aria-label="APEX LINER accueil">
-      <span className="relative h-14 w-44 overflow-hidden rounded-2xl border border-[#070708] bg-[#070708] shadow-2xl shadow-black/30 sm:h-20 sm:w-64">
-        <span className="absolute inset-0 bg-[#070708]" />
-        <Image
-          src={assetPath("/images/apex-liner-hero-logo.jpeg")}
+    <a href="#accueil" className="group flex items-center" aria-label="APEX LINER accueil">
+      <span className="block w-40 sm:w-56">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={assetPath("/assets/apexliner-logo.png")}
           alt="APEX LINER"
-          fill
-          sizes="256px"
-          className="object-cover object-center"
+          className="block h-auto w-full object-contain"
         />
       </span>
       {!compact && (
