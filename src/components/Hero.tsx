@@ -26,14 +26,12 @@ export function Hero() {
       </div>
 
       <div className="section-shell relative">
-        <div className="relative mx-auto mb-6 h-20 w-full max-w-[880px] sm:mb-10 sm:h-44 sm:max-w-[980px] lg:h-52">
-          <Image
-            src={assetPath("/images/apex-liner-logo-transparent.png")}
+        <div className="mx-auto mb-6 w-full max-w-[880px] sm:mb-10 sm:max-w-[980px]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={assetPath("/assets/apexliner-logo.png")}
             alt="APEX LINER"
-            fill
-            sizes="980px"
-            className="object-contain object-center drop-shadow-[0_18px_24px_rgba(0,0,0,0.62)]"
-            priority
+            className="block h-auto w-full object-contain"
           />
         </div>
       </div>
