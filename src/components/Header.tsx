@@ -1,14 +1,15 @@
 "use client";
 
 import { Logo } from "@/components/Logo";
+import Link from "next/link";
 import { useState } from "react";
 
 const links = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "Services", href: "#services" },
-  { label: "Réalisations", href: "#realisations" },
-  { label: "Marques", href: "#marques" },
-  { label: "Contact", href: "#contact" },
+  { label: "Accueil", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Réalisations", href: "/realisations" },
+  { label: "Marques", href: "/marques" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -21,9 +22,9 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-white/62 lg:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="transition hover:text-white">
+            <Link key={link.href} href={link.href} className="transition hover:text-white">
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -52,14 +53,14 @@ export function Header() {
         <div className="border-t border-white/10 bg-[#070708]/95 px-4 py-4 backdrop-blur-2xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className="rounded-2xl px-4 py-3 text-base font-medium text-white/70 transition hover:bg-white/[0.04] hover:text-white"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a href="mailto:Contact@apexliner.ch" className="btn-primary mt-3 justify-center">
               Demander un devis
