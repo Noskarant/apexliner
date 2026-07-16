@@ -26,7 +26,7 @@ export function Hero() {
       </div>
 
       <div className="section-shell relative">
-        <div className="relative mx-auto mb-6 h-20 w-full max-w-[1060px] overflow-hidden rounded-2xl border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [clip-path:inset(0_round_1rem)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:h-52 sm:rounded-[1.8rem] sm:[clip-path:inset(0_round_1.8rem)] lg:h-60">
+        <div className="relative mx-auto mb-6 aspect-[1672/941] w-full max-w-[860px] overflow-hidden rounded-2xl border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [clip-path:inset(0_round_1rem)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:rounded-[1.8rem] sm:[clip-path:inset(0_round_1.8rem)]">
           <div className="absolute inset-0 bg-[#070708]" />
           <div className="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-white/35" />
           <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />
@@ -34,8 +34,8 @@ export function Hero() {
             src={assetPath("/images/apex-liner-hero-logo.jpeg")}
             alt="APEX LINER"
             fill
-            sizes="1180px"
-            className="rounded-[inherit] object-contain object-center p-3 drop-shadow-[0_22px_26px_rgba(0,0,0,0.72)] sm:p-6"
+            sizes="860px"
+            className="rounded-[inherit] object-cover object-center drop-shadow-[0_22px_26px_rgba(0,0,0,0.72)]"
             priority
           />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,rgba(255,255,255,0.22),transparent_31%),linear-gradient(180deg,rgba(255,255,255,0.12),transparent_34%,rgba(0,0,0,0.34))]" />
