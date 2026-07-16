@@ -44,9 +44,9 @@ Le projet est configuré pour GitHub Pages via GitHub Actions.
 URL de preview GitHub Pages :
 
 ```text
-https://noskarant.github.io/apexliner/
+https://apexliner.ch/
 ```
 
 Dans GitHub, vérifier que `Settings > Pages > Build and deployment > Source` est configuré sur `GitHub Actions`.
 
-Pour connecter `apexliner.ch` plus tard, ajouter le domaine côté hébergeur choisi puis configurer les DNS chez le registrar.
+Le site est configuré pour fonctionner à la racine du domaine personnalisé `apexliner.ch`.
