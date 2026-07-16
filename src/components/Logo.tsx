@@ -7,11 +7,7 @@ type LogoProps = {
 export function Logo({ compact = false }: LogoProps) {
   return (
     <a href="#accueil" className="group flex items-center" aria-label="APEX LINER accueil">
-      <span className="relative block w-40 sm:w-56">
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 scale-150 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.14),transparent_70%)] blur-lg"
-        />
+      <span className="relative block w-40 overflow-hidden rounded-xl bg-gradient-to-b from-neutral-200 via-white to-neutral-300 px-2.5 py-1.5 shadow-md sm:w-56 sm:px-3.5 sm:py-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={assetPath("/assets/apexliner-logo.png")}
