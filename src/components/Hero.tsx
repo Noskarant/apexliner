@@ -1,6 +1,5 @@
 import { AnimatedImageColumns } from "@/components/AnimatedImageColumns";
 import { assetPath } from "@/lib/assetPath";
-import Image from "next/image";
 
 const mobileImages = [
   {
@@ -21,25 +20,8 @@ export function Hero() {
   return (
     <section id="accueil" className="relative pt-20 sm:pt-36">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-[680px] w-[900px] -translate-x-1/2 rounded-full bg-white/[0.05] blur-3xl" />
-        <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
-      </div>
-
-      <div className="section-shell relative">
-        <div className="relative mx-auto mb-6 aspect-[1672/420] w-full max-w-[1060px] overflow-hidden rounded-2xl border border-white/10 bg-[#070708] shadow-[0_22px_56px_rgba(0,0,0,0.62),0_10px_24px_rgba(255,255,255,0.04),0_0_0_1px_rgba(255,255,255,0.05),inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-18px_44px_rgba(0,0,0,0.48)] [clip-path:inset(0_round_1rem)] [transform:perspective(1200px)_rotateX(1.2deg)] sm:mb-10 sm:rounded-[1.8rem] sm:[clip-path:inset(0_round_1.8rem)]">
-          <div className="absolute inset-0 bg-[#070708]" />
-          <div className="pointer-events-none absolute inset-x-10 bottom-0 z-10 h-px bg-black/80" />
-          <Image
-            src={assetPath("/images/apex-liner-hero-banner.jpeg")}
-            alt="APEX LINER"
-            fill
-            sizes="1060px"
-            className="rounded-[inherit] object-cover object-center drop-shadow-[0_22px_26px_rgba(0,0,0,0.72)]"
-            priority
-          />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,rgba(255,255,255,0.22),transparent_31%),linear-gradient(180deg,rgba(255,255,255,0.12),transparent_34%,rgba(0,0,0,0.34))]" />
-          <div className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_18px_18px_44px_rgba(255,255,255,0.055),inset_-24px_-28px_70px_rgba(0,0,0,0.64)]" />
-        </div>
+        <div className="absolute left-1/2 top-0 h-[720px] w-[940px] -translate-x-1/2 rounded-full bg-white/[0.11] blur-3xl" />
+        <div className="absolute right-0 top-36 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl" />
       </div>
 
       <div className="section-shell relative grid min-w-0 max-w-full items-center gap-10 pb-16 sm:gap-14 sm:pb-0 lg:min-h-[calc(100vh-22rem)] lg:grid-cols-[1.05fr_0.95fr]">
