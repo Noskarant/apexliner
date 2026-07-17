@@ -32,6 +32,23 @@ export const metadata: Metadata = {
   },
 };
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://apexliner.ch/#business",
+  name: "APEX LINER Sàrl",
+  url: "https://apexliner.ch/",
+  email: "Contact@apexliner.ch",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Rue de l’Industrie 28, c/o AMAFINANCE SA",
+    postalCode: "1030",
+    addressLocality: "Bussigny",
+    addressRegion: "Vaud",
+    addressCountry: "CH",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,7 +56,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${display.variable} ${body.variable} scroll-smooth`}>
-      <body>{children}</body>
+      <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
+        {children}
+      </body>
     </html>
   );
 }
