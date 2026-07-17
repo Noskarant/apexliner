@@ -4,8 +4,7 @@ import { ServiceDetailPage } from "@/components/ServiceDetailPage";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { getServicePage, servicePages } from "@/lib/service-pages";
-
-const siteUrl = "https://apexliner.ch";
+import { businessInfo, nearbyServiceAreas, siteUrl } from "@/lib/local-seo";
 
 export function generateStaticParams() {
   return servicePages.map((service) => ({ slug: service.slug }));
@@ -39,13 +38,39 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     name: service.name,
     description: service.description,
     url: `${siteUrl}/services/${service.slug}/`,
-    provider: { "@type": "LocalBusiness", name: "APEX LINER", url: siteUrl, email: "Contact@apexliner.ch" },
-    areaServed: { "@type": "AdministrativeArea", name: "Canton de Vaud" },
+    provider: {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": `${siteUrl}/#business`,
+      name: businessInfo.name,
+      url: siteUrl,
+      email: businessInfo.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: businessInfo.streetAddress,
+        postalCode: businessInfo.postalCode,
+        addressLocality: businessInfo.locality,
+        addressRegion: businessInfo.region,
+        addressCountry: businessInfo.country,
+      },
+    },
+    areaServed: nearbyServiceAreas.map((area) => ({ "@type": "City", name: area })),
   };
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: service.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })),
+    mainEntity: service.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
-  return <><Header /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} /><ServiceDetailPage service={service} /><Footer /></>;
+  return (
+    <>
+      <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <ServiceDetailPage service={service} />
+      <Footer />
+    </>
+  );
 }

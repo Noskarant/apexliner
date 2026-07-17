@@ -1,4 +1,5 @@
 import { Logo } from "@/components/Logo";
+import { businessInfo, localAreaLabel } from "@/lib/local-seo";
 import Link from "next/link";
 
 export function Footer() {
@@ -9,15 +10,21 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-4 text-sm text-white/45">
-              Films solaires, covering & marquage publicitaire
+              Films solaires, covering & marquage publicitaire à Bussigny.
             </p>
-            <a href="mailto:Contact@apexliner.ch" className="mt-2 inline-flex text-sm font-semibold text-white/70 transition hover:text-white">
-              Contact@apexliner.ch
+            <p className="mt-2 max-w-xl text-xs leading-5 text-white/35">
+              Base principale : {businessInfo.locality}, canton de {businessInfo.region}. Zones proches : {localAreaLabel}.
+            </p>
+            <a href={`mailto:${businessInfo.email}`} className="mt-2 inline-flex text-sm font-semibold text-white/70 transition hover:text-white">
+              {businessInfo.email}
             </a>
           </div>
           <p className="text-sm text-white/35">© {new Date().getFullYear()} APEX LINER. Tous droits réservés.</p>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-6 text-xs text-white/35">
+          <Link href="/zone-intervention-bussigny-lausanne" className="transition hover:text-white/70">
+            Zone Bussigny-Lausanne
+          </Link>
           <Link href="/mentions-legales" className="transition hover:text-white/70">
             Mentions légales
           </Link>

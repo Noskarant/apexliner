@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { businessInfo, localAreaLabel } from "@/lib/local-seo";
 
 export function ContactSection() {
   const [name, setName] = useState("");
@@ -22,7 +23,7 @@ export function ContactSection() {
         cleanMessage,
       ].join("\n"),
     );
-    window.location.href = `mailto:Contact@apexliner.ch?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${businessInfo.email}?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -34,10 +35,15 @@ export function ContactSection() {
             Parlons de votre projet
           </h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-white/60 sm:mt-6 sm:text-lg sm:leading-8">
-            Pour une demande de devis ou une première prise de contact, contactez APEX LINER par email.
+            APEX LINER est basée à Bussigny, dans le canton de Vaud. Pour une demande de devis à Bussigny, Crissier,
+            Renens, Ecublens ou Lausanne, contactez l’entreprise par email.
           </p>
-          <a href="mailto:Contact@apexliner.ch" className="mt-6 inline-flex break-all text-lg font-bold text-white underline decoration-white/20 underline-offset-8 transition hover:decoration-white sm:mt-8 sm:text-xl">
-            Contact@apexliner.ch
+          <div className="mt-5 space-y-2 text-sm leading-6 text-white/50">
+            <p>Localisation principale : {businessInfo.locality}, canton de {businessInfo.region}.</p>
+            <p>Zones proches : {localAreaLabel}.</p>
+          </div>
+          <a href={`mailto:${businessInfo.email}`} className="mt-6 inline-flex break-all text-lg font-bold text-white underline decoration-white/20 underline-offset-8 transition hover:decoration-white sm:mt-8 sm:text-xl">
+            {businessInfo.email}
           </a>
         </div>
 
@@ -54,7 +60,7 @@ export function ContactSection() {
           </div>
           <label className="mt-4 block space-y-2 text-sm font-semibold text-white/70">
             Message
-            <textarea name="message" value={message} onChange={(event) => setMessage(event.target.value)} className="field min-h-40 resize-none" placeholder="Décrivez rapidement le projet, le lieu, le type de surface ou le besoin." required />
+            <textarea name="message" value={message} onChange={(event) => setMessage(event.target.value)} className="field min-h-40 resize-none" placeholder="Décrivez le projet, le lieu, le type de surface ou le besoin." required />
           </label>
           <button type="submit" className="btn-primary mt-5 w-full justify-center">
             Préparer l’email

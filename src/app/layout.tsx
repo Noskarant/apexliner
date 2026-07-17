@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
+import { businessInfo, nearbyServiceAreas, siteUrl } from "@/lib/local-seo";
 import "./globals.css";
 
 const display = Sora({
@@ -15,14 +16,14 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://apexliner.ch"),
-  title: "APEX LINER | Films solaires, covering & marquage publicitaire",
+  metadataBase: new URL(siteUrl),
+  title: "APEX LINER | Films solaires, covering & marquage publicitaire à Bussigny",
   description:
-    "Entreprise spécialisée dans la pose de films solaires, covering et marquage publicitaire en Suisse.",
+    "Entreprise basée à Bussigny, dans le canton de Vaud, spécialisée dans la pose de films solaires, covering et marquage publicitaire.",
   openGraph: {
-    title: "APEX LINER | Films solaires, covering & marquage publicitaire",
+    title: "APEX LINER | Films solaires, covering & marquage publicitaire à Bussigny",
     description:
-      "Entreprise spécialisée dans la pose de films solaires, covering et marquage publicitaire en Suisse.",
+      "Entreprise basée à Bussigny, dans le canton de Vaud, spécialisée dans la pose de films solaires, covering et marquage publicitaire.",
     siteName: "APEX LINER",
     images: ["/images/logo-wide.jpeg"],
     type: "website",
@@ -35,18 +36,19 @@ export const metadata: Metadata = {
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  "@id": "https://apexliner.ch/#business",
-  name: "APEX LINER Sàrl",
-  url: "https://apexliner.ch/",
-  email: "Contact@apexliner.ch",
+  "@id": `${siteUrl}/#business`,
+  name: businessInfo.name,
+  url: `${siteUrl}/`,
+  email: businessInfo.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Rue de l’Industrie 28, c/o AMAFINANCE SA",
-    postalCode: "1030",
-    addressLocality: "Bussigny",
-    addressRegion: "Vaud",
-    addressCountry: "CH",
+    streetAddress: businessInfo.streetAddress,
+    postalCode: businessInfo.postalCode,
+    addressLocality: businessInfo.locality,
+    addressRegion: businessInfo.region,
+    addressCountry: businessInfo.country,
   },
+  areaServed: nearbyServiceAreas.map((area) => ({ "@type": "City", name: area })),
 };
 
 export default function RootLayout({
